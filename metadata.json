@@ -1,0 +1,6 @@
+{
+  "name": "AURA Bloomberg Sentiment Terminal",
+  "description": "Desktop-only dark terminal financial sentiment dashboard powered by Gemini Flash and live RSS feeds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
