@@ -213,6 +213,10 @@ export default function App() {
 
           if (sentRes.ok) {
             const sentData = await sentRes.json();
+            if (sentData.warning) {
+              setRateLimitWarning(sentData.warning);
+            }
+
             const scoresMap = new Map<string, any>();
             (sentData.scores || []).forEach((s: any) => {
               if (s.id) scoresMap.set(s.id, s);
@@ -247,7 +251,9 @@ export default function App() {
 
             saveScoresToCache(newCachedScores);
           } else {
-            // Push unscored if sentiment failed
+            const errData = await sentRes.json().catch(() => ({}));
+            const msg = errData.details || errData.error || `Sentiment API failed (${sentRes.status})`;
+            setRateLimitWarning(msg);
             unscoredArticles.forEach((a) => enrichedArticles.push(a));
           }
         }
