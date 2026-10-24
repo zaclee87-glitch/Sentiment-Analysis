@@ -208,7 +208,7 @@ export const TickerDetailPanel: React.FC<TickerDetailPanelProps> = ({
               </div>
             </div>
             <span className="text-[9px] text-zinc-500">
-              Sources: Yahoo Finance RSS + Google News + SEC EDGAR Atom
+              Source: Finnhub Financial News API (real-time institutional wire)
             </span>
           </div>
         </div>

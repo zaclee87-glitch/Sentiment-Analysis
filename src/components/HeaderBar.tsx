@@ -93,7 +93,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
 
           <div className="hidden xl:flex items-center gap-1.5 text-[11px] text-emerald-400/80 bg-emerald-950/40 border border-emerald-900/60 px-2 py-0.5 rounded">
             <Activity className="w-3 h-3 text-emerald-400" />
-            <span className="uppercase tracking-wider">FEED: LIVE RSS + GEMINI FLASH</span>
+            <span className="uppercase tracking-wider">FEED: FINNHUB API + GEMINI FLASH</span>
           </div>
         </div>
 
